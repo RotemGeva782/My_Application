@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/calendar"
+            android:icon="@drawable/calendar"
+            android:title="לוח שנה"></item>
+        <item
+            android:id="@+id/user"
+            android:icon="@drawable/user"
+            android:title="הפרופיל שלי"></item>
+        <item
+            android:id="@+id/instructors"
+            android:icon="@drawable/instructors"
+            android:title="מדריכים"></item>
+        <item
+            android:id="@+id/students"
+            android:icon="@drawable/students"
+            android:title="תלמידים"></item>
+
+
+    </group>
+
+    <item android:title="פעולות">
+        <menu>
+            <item
+                android:id="@+id/export_to_excel"
+                android:icon="@drawable/microsoft_excel"
+                android:title="ייצוא לאקסל">
+
+            </item>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings"
+                android:title="הגדרות">
+
+            </item>
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/log_out"
+                android:title="התנתק">
+
+            </item>
+
+
+        </menu>
+
+
+    </item>
+
+
+</menu>
