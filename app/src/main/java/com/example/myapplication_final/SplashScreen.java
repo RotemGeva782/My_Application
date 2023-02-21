@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.animation.AnimationUtils;
 
 import android.content.Intent;
@@ -22,6 +23,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        Log.d("tag", this.getLocalClassName());
         /*
          * another option:
          * new Handler()
