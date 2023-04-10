@@ -1,24 +1,35 @@
 package com.example.myapplication_final;
 
 public class Student {
-
+    private static int idSt=2;
     private String name;
     private int age;
     private String lessonType;
-    private int numOfLessons;
     private String parentName;
-    private String parentMail;
     private String parentPhone;
 
-
-    public Student(String name, int age, String lessonType, int numOfLessons, String parentName, String parentMail, String parentPhone) {
+    /**
+     * student cursor
+     * @param name
+     * @param age
+     * @param lessonType
+     * @param parentName
+     * @param parentPhone
+     */
+    public Student(String name, int age, String lessonType, String parentName,
+                   String parentPhone) {
+        idSt+=1;
         this.name = name;
         this.age = age;
         this.lessonType = lessonType;
-        this.numOfLessons = numOfLessons;
         this.parentName = parentName;
-        this.parentMail = parentMail;
         this.parentPhone = parentPhone;
+    }
+
+
+
+    public static int getIdSt() {
+        return idSt;
     }
 
 
@@ -46,13 +57,7 @@ public class Student {
         this.lessonType = lessonType;
     }
 
-    public int getNumOfLessons() {
-        return numOfLessons;
-    }
 
-    public void setNumOfLessons(int numOfLessons) {
-        this.numOfLessons = numOfLessons;
-    }
 
     public String getParentName() {
         return parentName;
@@ -62,13 +67,6 @@ public class Student {
         this.parentName = parentName;
     }
 
-    public String getParentMail() {
-        return parentMail;
-    }
-
-    public void setParentMail(String parentMail) {
-        this.parentMail = parentMail;
-    }
 
     public String getParentPhone() {
         return parentPhone;

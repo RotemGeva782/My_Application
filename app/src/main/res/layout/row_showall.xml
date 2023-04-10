@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="horizontal"
     android:layout_height="match_parent">
 
+    <CheckBox
+        android:layout_margin="5dp"
+        android:id="@+id/checkBox_missing"
+        android:layout_width="67dp"
+        android:layout_height="wrap_content"
+        android:text="נעדר"/>
     <TextView
-        android:id="@+id/student_name_main"
+        android:layout_margin="5dp"
+        android:id="@+id/textView_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
-
+        android:text="מספר שיעורים"
+        android:textSize="20dp"/>
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/spinner_numOfLessons"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"/>
     <TextView
+        android:layout_margin="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/student_lessonType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lesson type"
+        android:text="סוג"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        android:textSize="25sp"/>
 
     <TextView
-        android:id="@+id/student_age"
+        android:layout_margin="5dp"
+        android:id="@+id/student_name_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="age"
+        android:layout_gravity="right"
+        android:text="שם תלמיד"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="25sp"/>
+</LinearLayout>

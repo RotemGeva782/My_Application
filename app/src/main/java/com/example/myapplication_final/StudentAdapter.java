@@ -22,11 +22,11 @@ public class StudentAdapter extends ArrayAdapter<Student> {
 
         TextView tv_name = view.findViewById(R.id.student_name_main);
         TextView tv_lessonType = view.findViewById(R.id.student_lessonType);
-        TextView tv_age = view.findViewById(R.id.student_age);
+
 
         tv_name.setText(student_tmp.getName());
         tv_lessonType.setText(student_tmp.getLessonType());
-        tv_age.setText(String.valueOf(student_tmp.getAge()));
+
 
         return view;
     }

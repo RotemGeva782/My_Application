@@ -1,85 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/background"
-    android:fitsSystemWindows="true"
-    tools:context=".MainScreen"
-    tools:openDrawer="start">
+    tools:context=".MainScreen">
 
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/lv_students"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.599" />
+
+    <TextView
+        android:id="@+id/textView_plan1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="שורת חיפוש"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#1976D2"></androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/textView_plan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|||"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 
-        <FrameLayout
-            android:id="@+id/Fragment_container"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></FrameLayout>
-
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="85dp"
-            android:layout_height="71dp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.04"
-            app:srcCompat="@drawable/logo" />
-
-        <ListView
-            android:id="@+id/lv_students"
-            android:layout_width="308dp"
-            android:layout_height="500dp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.33"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/add_student_fabtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#1976D2"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.954"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lv_students"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/plus" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"
+        app:srcCompat="@drawable/logo" />
 
 
-    </LinearLayout>
-<com.google.android.material.navigation.NavigationView
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:id="@+id/navigation_view"
-    app:headerLayout="@layout/nav_header"
-    app:menu="@menu/menu"
-    android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
-
-
-
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
