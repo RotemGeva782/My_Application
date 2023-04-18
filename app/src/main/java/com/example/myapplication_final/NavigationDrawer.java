@@ -16,7 +16,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class NavigationDrawer extends AppCompatActivity {
 
-    FloatingActionButton add_student;
 
     //data base:
     SQLiteDatabase database;
@@ -28,7 +27,6 @@ public class NavigationDrawer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-        add_student = findViewById(R.id.add_student_fabtn);
 
         //creating data base
         database = openOrCreateDatabase(Project_Utils.DATABASE_NAME,
@@ -39,20 +37,6 @@ public class NavigationDrawer extends AppCompatActivity {
 
 
 
-        /**
-         * fabtn: opening a custom dialog for adding a new student
-         */
-        add_student.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(NavigationDrawer.this);
-                ViewGroup viewGroup = findViewById(android.R.id.content);
-                View dialogView = LayoutInflater.from(view.getContext()).inflate(R.layout.customview_add_student, viewGroup, false);
-                builder.setView(dialogView);
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-            }
-        });
 
 
 

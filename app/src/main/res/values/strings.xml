@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application_final</string>
     //alert dialog for deleting a student from list view
-    <string name="dialog_message">are you sure you want to delete this student?</string>
+    <string name="dialog_message">אתה בטוח שתרצה למחוק את התלמיד?</string>
 
     //for nav_bar
     <string name="navigation_draw_open">open navigation drawer</string>

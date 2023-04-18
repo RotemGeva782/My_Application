@@ -4,7 +4,6 @@ public class Student {
     private static int idSt = 2;
     private String name;
     private int age;
-    private String lessonType; //project_Utils
     private String parentName;
     private String parentPhone;
 
@@ -12,16 +11,14 @@ public class Student {
      * student cursor
      * @param name
      * @param age
-     * @param lessonType
      * @param parentName
      * @param parentPhone
      */
-    public Student(String name, int age, String lessonType, String parentName,
+    public Student(String name, int age, String parentName,
                    String parentPhone) {
         idSt+=1;
         this.name = name;
         this.age = age;
-        this.lessonType = lessonType;
         this.parentName = parentName;
         this.parentPhone = parentPhone;
     }
@@ -48,16 +45,6 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public String getLessonType() {
-        return lessonType;
-    }
-
-    public void setLessonType(String lessonType) {
-        this.lessonType = lessonType;
-    }
-
-
 
     public String getParentName() {
         return parentName;

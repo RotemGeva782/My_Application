@@ -9,7 +9,7 @@
 
 
     <ListView
-        android:id="@+id/lv_students"
+        android:id="@+id/lv_insert_lesson"
         android:layout_width="match_parent"
         android:layout_height="490dp"
 
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.599" />
 
     <TextView
-        android:id="@+id/textView_plan1"
+        android:id="@+id/search_bar_students_les"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="שורת חיפוש"
@@ -56,6 +56,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041"
         app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/button_go_to_students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_insert_lesson" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

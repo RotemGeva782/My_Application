@@ -5,31 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <EditText
         android:id="@+id/et_studentLessonType_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
+        android:hint="spinner"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/tv_title2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
-
-    <EditText
-        android:id="@+id/et_studentNumberOfLessons_add"
-        android:layout_width="106dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/tv_title2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <EditText
         android:id="@+id/et_parentName_add"
@@ -39,10 +28,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/save_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <EditText
         android:id="@+id/et_parentPhone_add"
@@ -52,23 +41,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/save_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
-
-    <EditText
-        android:id="@+id/et_parentMail_add"
-        android:layout_width="106dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/save_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <Button
         android:id="@+id/save_btn"
@@ -76,7 +52,7 @@
         android:layout_height="60dp"
         android:backgroundTint="#1976D2"
         android:background="@drawable/btn_shape"
-        android:text="save"
+        android:text="שמור"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,126 +61,101 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.932" />
 
+
     <TextView
         android:id="@+id/tv_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="age"
+        android:text="גיל"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/et_studentAge_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.905" />
-
-    <TextView
-        android:id="@+id/tv_parent_mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" mail"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_parentMail_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.842" />
 
     <TextView
         android:id="@+id/tv_parent_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="phone"
+        android:text="טלפון"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_parentPhone_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <TextView
         android:id="@+id/tv_parent_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:text="שם הורה"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_parentName_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <TextView
         android:id="@+id/tv_lesson_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lesson type"
+        android:text="סוג שיעור"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_studentLessonType_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
-
-    <TextView
-        android:id="@+id/tv_num_of_lessons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="number of lessons"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_studentNumberOfLessons_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:text="שם מלא"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/et_studentName_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.905" />
+        app:layout_constraintVertical_bias="0.842" />
 
     <TextView
         android:id="@+id/tv_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="add a new student"
+        android:text="הוספת תלמיד"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_age"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <TextView
         android:id="@+id/tv_title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="parent:"
+        android:text="הורה"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_parent_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <EditText
         android:id="@+id/et_studentName_add"
@@ -214,22 +165,22 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <EditText
         android:id="@+id/et_studentAge_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
+        android:layout_marginTop="160dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/tv_num_of_lessons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
+        app:layout_constraintVertical_bias="0.868" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
