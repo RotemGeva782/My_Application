@@ -1,10 +1,10 @@
 package com.example.myapplication_final;
 
 public class Student {
-    private static int idSt=2;
+    private static int idSt = 2;
     private String name;
     private int age;
-    private String lessonType;
+    private String lessonType; //project_Utils
     private String parentName;
     private String parentPhone;
 

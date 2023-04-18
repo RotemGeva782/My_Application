@@ -5,7 +5,18 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-public class Sqlite_Utils {
+public class Project_Utils {
+    //lesson types
+    final static String PRIVATE_LESSON = "פרטי";
+    final static String GROUP_LESSON = "קבוצתי";
+    final static String THERAPY = "טיפולי";
+    final static String WORKOUT = "אימון";
+    final static String BASIC = "מתחילים";
+    final static String MACCABI = "מכבי";
+    final static String BOARDING_SCHOOL = "פנימייה" ;
+
+
+    //sqlite
     final static String DATABASE_NAME = "db_project";
     final static String TABLE_NAME_STUDENTS = "tbl_students";
     final static String COL_NAME = "name";

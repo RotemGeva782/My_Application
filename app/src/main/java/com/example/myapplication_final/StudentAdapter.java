@@ -18,7 +18,7 @@ public class StudentAdapter extends ArrayAdapter<Student> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Student student_tmp = students.get(position);
-        View view = LayoutInflater.from(context).inflate(R.layout.row_showall, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.row_attandence, null);
 
         TextView tv_name = view.findViewById(R.id.student_name_main);
         TextView tv_lessonType = view.findViewById(R.id.student_lessonType);

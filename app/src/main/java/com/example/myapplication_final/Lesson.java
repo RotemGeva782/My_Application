@@ -1,6 +1,10 @@
 package com.example.myapplication_final;
 
-public enum Lesson {
-    PRIVATE_LESSON, GROUP_LESSON, THERAPY, WORKOUT, BASIC, MACCABI, BOARDING_SCHOOL ;
+public class Lesson {
+    private static int idLe = 2;
+    private int day;
+    private int month;
+    private int year;
+    private boolean missing;
 
 }

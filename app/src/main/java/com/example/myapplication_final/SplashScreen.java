@@ -1,7 +1,5 @@
 package com.example.myapplication_final;
 
-import static android.view.animation.AnimationUtils.loadAnimation;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -11,7 +9,6 @@ import android.view.animation.AnimationUtils;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
@@ -64,9 +61,9 @@ public class SplashScreen extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_animation);
         iv_loading.startAnimation(animation);
 
-        db = openOrCreateDatabase(Sqlite_Utils.DATABASE_NAME, Context.MODE_PRIVATE, null);
-        Sqlite_Utils.createTables(db);
-        Sqlite_Utils.insertToTables(db);
+        db = openOrCreateDatabase(Project_Utils.DATABASE_NAME, Context.MODE_PRIVATE, null);
+        Project_Utils.createTables(db);
+        Project_Utils.insertToTables(db);
 
 
     }

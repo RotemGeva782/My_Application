@@ -6,19 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.ArrayList;
 
 public class NavigationDrawer extends AppCompatActivity {
 
@@ -37,7 +31,7 @@ public class NavigationDrawer extends AppCompatActivity {
         add_student = findViewById(R.id.add_student_fabtn);
 
         //creating data base
-        database = openOrCreateDatabase(Sqlite_Utils.DATABASE_NAME,
+        database = openOrCreateDatabase(Project_Utils.DATABASE_NAME,
                 Context.MODE_PRIVATE, null);
 
         //navigation bar:
