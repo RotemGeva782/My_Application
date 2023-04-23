@@ -40,7 +40,7 @@ public class ShowStudents extends AppCompatActivity {
         //click on list view
         lv_students_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             /**
-             * shows the student (alert dialog)
+             * shows the student (custom dialog)
              * @param adapterView
              * @param view
              * @param i

@@ -18,11 +18,26 @@ public class Project_Utils {
 
     //sqlite
     final static String DATABASE_NAME = "db_project";
+    //table 1: students
     final static String TABLE_NAME_STUDENTS = "tbl_students";
+    final static String COL_ID_ST = "idSt";
     final static String COL_NAME = "name";
     final static String COL_AGE = "age";
     final static String COL_PARENT_NAME = "parentName";
     final static String COL_PARENT_PHONE = "parentPhone";
+    //table 2: general lesson
+    final static String TABLE_NAME_GENERAL_LESSONS = "tbl_general_lesson";
+    final static String COL_ID_LE_GENERAL = "idLeGeneral";
+    final static String COL_TYPE = "type";
+    final static String COL_PRICE = "price";
+
+    //table 3: lessons
+    final static String TABLE_NAME_LESSONS = "tbl_lessons";
+    final static String COL_ID_LE = "idLe";
+    final static String COL_DATE = "date";
+    final static String COL_MISSING = "missing";
+    final static String COL_NUM_OF_LESSONS = "numOfLessons";
+    //and the id's
 
     /**
      *

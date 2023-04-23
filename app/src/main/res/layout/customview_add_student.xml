@@ -7,7 +7,7 @@
 
 
     <EditText
-        android:id="@+id/et_parentName_add"
+        android:id="@+id/et_parentPhone_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.717" />
 
     <EditText
-        android:id="@+id/et_parentPhone_add"
+        android:id="@+id/et_parentName_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
@@ -34,37 +34,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.717" />
 
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_shape"
+        android:backgroundTint="#1976D2"
+        android:text="ביטול"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
+
     <Button
         android:id="@+id/save_btn"
-        android:layout_width="287dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#1976D2"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
         android:background="@drawable/btn_shape"
+        android:backgroundTint="#1976D2"
         android:text="שמור"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
-
+        app:layout_constraintVertical_bias="0.943" />
 
     <TextView
-        android:id="@+id/tv_age"
+        android:id="@+id/tv_age_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="גיל"
+        android:text="גיל / תאריך לידה?"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/et_studentAge_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.842" />
 
     <TextView
-        android:id="@+id/tv_parent_phone"
+        android:id="@+id/tv_parent_phone_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="טלפון"
@@ -77,7 +94,7 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <TextView
-        android:id="@+id/tv_parent_name"
+        android:id="@+id/tv_parent_name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="שם הורה"
@@ -90,7 +107,7 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <TextView
-        android:id="@+id/tv_lesson_type"
+        android:id="@+id/tv_lesson_type_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="סוג שיעור"
@@ -103,7 +120,7 @@
         app:layout_constraintVertical_bias="0.33" />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="שם מלא"
@@ -123,12 +140,12 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_age"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/tv_title2"
@@ -146,7 +163,7 @@
         app:layout_constraintVertical_bias="0.515" />
 
     <EditText
-        android:id="@+id/et_studentName_add"
+        android:id="@+id/et_studentAge_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
@@ -160,21 +177,20 @@
         app:layout_constraintVertical_bias="0.23" />
 
     <EditText
-        android:id="@+id/et_studentAge_add"
-        android:hint="text only"
+        android:id="@+id/et_studentName_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:layout_marginTop="160dp"
         android:ems="10"
+        android:hint="text only"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner_lesson_types"
+        android:id="@+id/spinner_lessonTypes_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
