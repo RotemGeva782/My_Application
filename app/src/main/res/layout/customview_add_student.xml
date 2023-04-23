@@ -7,44 +7,32 @@
 
 
     <EditText
-        android:id="@+id/et_studentLessonType_add"
-        android:layout_width="106dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:hint="spinner"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <EditText
         android:id="@+id/et_parentName_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
+        android:hint="num only"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/save_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.717" />
 
     <EditText
         android:id="@+id/et_parentPhone_add"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
+        android:hint="text only"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/save_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.717" />
 
     <Button
         android:id="@+id/save_btn"
@@ -162,6 +150,7 @@
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:ems="10"
+        android:hint="num only"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,6 +161,7 @@
 
     <EditText
         android:id="@+id/et_studentAge_add"
+        android:hint="text only"
         android:layout_width="106dp"
         android:layout_height="37dp"
         android:layout_marginTop="160dp"
@@ -182,5 +172,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.868" />
+
+    <Spinner
+        android:id="@+id/spinner_lesson_types"
+        android:layout_width="106dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
