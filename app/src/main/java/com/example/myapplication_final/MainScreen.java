@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -46,7 +47,9 @@ public class MainScreen extends AppCompatActivity implements View.OnClickListene
         //click on list view
         lv_insert_lesson.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             /**
-             * shows the student (alert dialog)
+             * shows the student
+             * it is important, because if two students will have the same name and last name
+             * the user wont be able to recognizance them in this activity
              * @param adapterView
              * @param view
              * @param i
@@ -62,7 +65,7 @@ public class MainScreen extends AppCompatActivity implements View.OnClickListene
 
 
         /**
-         * date picker
+         * <date picker>
          */
 
 
@@ -116,8 +119,18 @@ public class MainScreen extends AppCompatActivity implements View.OnClickListene
             }
         });
 
+        /**
+         * </date picker>
+         */
 
+    }//endOf_onCreate
 
+    public void onDateSet(DatePicker datePicker, int nYear, int nMonth, int nDay) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MMMM/yyyy");
+        Calendar.getInstance().set(nYear, nMonth, nDay);
+        String dateString = sdf.format(Calendar.getInstance().getTime());
+        //datePicker.setText(dateString);
+        Toast.makeText(this, ""+dateString, Toast.LENGTH_SHORT).show();
     }
 
     /**

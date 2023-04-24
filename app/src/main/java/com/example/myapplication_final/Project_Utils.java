@@ -3,6 +3,8 @@ package com.example.myapplication_final;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class Project_Utils {
@@ -25,35 +27,51 @@ public class Project_Utils {
     final static String COL_AGE = "age";
     final static String COL_PARENT_NAME = "parentName";
     final static String COL_PARENT_PHONE = "parentPhone";
+
     //table 2: general lesson
     final static String TABLE_NAME_GENERAL_LESSONS = "tbl_general_lesson";
-    final static String COL_ID_LE_GENERAL = "idLeGeneral";
+    final static String COL_ID_LE = "idLeGeneral";
     final static String COL_TYPE = "type";
     final static String COL_PRICE = "price";
 
-    //table 3: lessons
-    final static String TABLE_NAME_LESSONS = "tbl_lessons";
-    final static String COL_ID_LE = "idLe";
+    //table 3: attendance
+    final static String TABLE_NAME_LESSONS = "tbl_attendance";
+    final static String COL_ID_AT = "idAt";
+    final static String COL_ID_STUDENT = "idSt";
+    final static String COL_ID_GENERAL_LESSON = "idGeneral_lesson";
     final static String COL_DATE = "date";
     final static String COL_MISSING = "missing";
     final static String COL_NUM_OF_LESSONS = "numOfLessons";
-    //and the id's
+
 
     /**
      *
      * @param db
+     * create tables
      */
     public static void createTables(SQLiteDatabase db) {
+        //הכל צריך להיות מסוג TEXT?
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_STUDENTS + "("
+        //table 1: students
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_STUDENTS + "("+ COL_ID_ST + "INTEGER,"
                 + COL_NAME + " TEXT," + COL_AGE + " TEXT, "
                 + COL_PARENT_NAME + " TEXT, " + COL_PARENT_PHONE + " TEXT);");
-        //another different table in the same database
+        //table 2: general lesson
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_GENERAL_LESSONS + "("+ COL_ID_LE + "INTEGER,"
+                + COL_TYPE + " TEXT," + COL_PRICE + " TEXT);");
+        //table 3: attendance
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_LESSONS + "("+ COL_ID_AT + "INTEGER,"
+                + COL_ID_STUDENT + " INTEGER," + COL_ID_GENERAL_LESSON + " INTEGER, "
+                + COL_DATE + " TEXT, " + COL_MISSING + " BIT," + COL_NUM_OF_LESSONS + " INTEGER);");
+
     }
 
     /**
      *
      * @param db
+     * insert the students from the array list to the student table
+     *
+     * הפעולה לא צריכה לקבל ? ArrayList
      */
     public static void insertToTables(SQLiteDatabase db) {
         ArrayList<Student> list = buildList();
@@ -64,6 +82,11 @@ public class Project_Utils {
 
     }
 
+    /**
+     *
+     * @param db
+     * @return an array list of students from the students table
+     */
     public static ArrayList<Student> retrive_Students_List(SQLiteDatabase db) {
         ArrayList<Student> list = new ArrayList<>();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME_STUDENTS, null);
@@ -75,6 +98,10 @@ public class Project_Utils {
         return list;
     }
 
+    /**
+     *
+     * @return an array list for example
+     */
 
     public static ArrayList<Student> buildList() {
         ArrayList<Student> list = new ArrayList<Student>();

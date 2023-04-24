@@ -12,22 +12,22 @@
         android:id="@+id/titleSignUp"
         android:layout_width="158dp"
         android:layout_height="61dp"
-        android:text="Sign up"
+        android:text="הרשמה"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.138" />
 
     <EditText
         android:id="@+id/emailAddress_signUp"
         android:layout_width="221dp"
         android:layout_height="53dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="מייל"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="false"
         android:singleLine="false"
@@ -45,7 +45,7 @@
         android:layout_width="221dp"
         android:layout_height="53dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="סיסמה"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,24 +56,24 @@
     <ImageView
         android:id="@+id/password_symbol"
         android:layout_width="44dp"
-        android:layout_height="53dp"
+        android:layout_height="49dp"
         android:background="@drawable/password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545"
+        app:layout_constraintVertical_bias="0.541"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/email_symbol"
-        android:layout_width="38dp"
-        android:layout_height="48dp"
+        android:layout_width="44dp"
+        android:layout_height="49dp"
         android:background="@drawable/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.42"
@@ -85,34 +85,34 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_shape"
         android:backgroundTint="#1976D2"
-        android:text="create account"
+        android:text="צור חשבון"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <ImageView
         android:id="@+id/user_symbol"
-        android:layout_width="47dp"
-        android:layout_height="54dp"
+        android:layout_width="44dp"
+        android:layout_height="49dp"
         android:background="@drawable/user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <EditText
         android:id="@+id/userName_signUp"
         android:layout_width="221dp"
         android:layout_height="53dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="שם משתמש"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,15 +124,15 @@
         android:id="@+id/intentToSignIn"
         android:layout_width="321dp"
         android:layout_height="54dp"
-        android:text="Already have an account? Sign in"
+        android:text="רשומים? לחצו כאן לכניסה"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803"
+        app:layout_constraintVertical_bias="0.896"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -141,10 +141,10 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.058"
         app:srcCompat="@drawable/logo" />
 
 

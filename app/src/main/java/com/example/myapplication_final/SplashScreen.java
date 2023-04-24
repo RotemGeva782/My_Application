@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        Log.d("tag", this.getLocalClassName());
+       // Log.d("tag", this.getLocalClassName());
         /*
          * another option:
          * new Handler()
@@ -61,9 +61,16 @@ public class SplashScreen extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_animation);
         iv_loading.startAnimation(animation);
 
+        /**
+         * <data base - sqlite>
+         */
+
         db = openOrCreateDatabase(Project_Utils.DATABASE_NAME, Context.MODE_PRIVATE, null);
         Project_Utils.createTables(db);
         Project_Utils.insertToTables(db);
+        /**
+         * </data base>
+         */
 
 
     }

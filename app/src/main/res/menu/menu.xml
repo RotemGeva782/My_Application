@@ -6,10 +6,7 @@
             android:id="@+id/calendar"
             android:icon="@drawable/calendar"
             android:title="לוח שנה"></item>
-        <item
-            android:id="@+id/user"
-            android:icon="@drawable/user"
-            android:title="הפרופיל שלי"></item>
+
         <item
             android:id="@+id/instructors"
             android:icon="@drawable/pen"
