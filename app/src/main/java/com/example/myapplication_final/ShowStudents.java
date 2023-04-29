@@ -2,35 +2,35 @@ package com.example.myapplication_final;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 
 public class ShowStudents extends AppCompatActivity {
     ListView lv_students_list;
-    TextView search;
     FloatingActionButton add_student;
     ArrayList<Student> students_list;
     StudentAdapter adapter;
     AlertDialog.Builder builder;
     Dialog dialog;
-
     EditText et_studentName_add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,6 @@ public class ShowStudents extends AppCompatActivity {
 
         add_student = findViewById(R.id.add_student_fabtn);
         lv_students_list = findViewById(R.id.lv_students_list);
-        search = findViewById(R.id.search_bar_students);
         students_list = buildList();
         adapter = new StudentAdapter(ShowStudents.this, 0, students_list);
 
@@ -171,6 +170,56 @@ public class ShowStudents extends AppCompatActivity {
 
         et_studentName_add.setText(tmp.getName());
     }
+
+    /**
+     * <searchView>
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu with items using MenuInflator
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+
+        // Initialise menu item search bar
+        // with id and take its object
+        MenuItem searchViewItem = menu.findItem(R.id.search_bar);
+        SearchView searchView = (SearchView) searchViewItem.getActionView();
+
+
+        // attach setOnQueryTextListener
+        // to search view defined above
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            // Override onQueryTextSubmit method which is call when submit query is searched
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // If the list contains the search query than filter the adapter
+                // using the filter method with the query as its argument
+                if (students_list.contains(query)) {
+                    adapter.getFilter().filter(query);
+                } else {
+                    // Search query not found in List View
+                    Toast.makeText(ShowStudents.this, "Not found", Toast.LENGTH_LONG).show();
+                }
+                return false;
+            }
+
+            // This method is overridden to filter the adapter according
+            // to a search query when the user is typing search
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+
+    /**
+     * </searchView>
+     */
 
 
     /**

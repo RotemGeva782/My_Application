@@ -50,11 +50,10 @@ public class Project_Utils {
      * create tables
      */
     public static void createTables(SQLiteDatabase db) {
-        //הכל צריך להיות מסוג TEXT?
 
         //table 1: students
         db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_STUDENTS + "("+ COL_ID_ST + "INTEGER,"
-                + COL_NAME + " TEXT," + COL_AGE + " TEXT, "
+                + COL_NAME + " TEXT," + COL_AGE + " INTEGER, "
                 + COL_PARENT_NAME + " TEXT, " + COL_PARENT_PHONE + " TEXT);");
         //table 2: general lesson
         db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_GENERAL_LESSONS + "("+ COL_ID_LE + "INTEGER,"
