@@ -52,14 +52,14 @@ public class Project_Utils {
     public static void createTables(SQLiteDatabase db) {
 
         //table 1: students
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_STUDENTS + "("+ COL_ID_ST + "INTEGER,"
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_STUDENTS + "("+ COL_ID_ST + "INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_NAME + " TEXT," + COL_AGE + " INTEGER, "
                 + COL_PARENT_NAME + " TEXT, " + COL_PARENT_PHONE + " TEXT);");
         //table 2: general lesson
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_GENERAL_LESSONS + "("+ COL_ID_LE + "INTEGER,"
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_GENERAL_LESSONS + "("+ COL_ID_LE + "INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_TYPE + " TEXT," + COL_PRICE + " TEXT);");
         //table 3: attendance
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_LESSONS + "("+ COL_ID_AT + "INTEGER,"
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_LESSONS + "("+ COL_ID_AT + "INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COL_ID_STUDENT + " INTEGER," + COL_ID_GENERAL_LESSON + " INTEGER, "
                 + COL_DATE + " TEXT, " + COL_MISSING + " BIT," + COL_NUM_OF_LESSONS + " INTEGER);");
 
@@ -75,7 +75,7 @@ public class Project_Utils {
     public static void insertToTables(SQLiteDatabase db) {
         ArrayList<Student> list = buildList();
         for (Student cp : list) {
-            db.execSQL("INSERT INTO " + TABLE_NAME_STUDENTS + " VALUES('" + cp.getName() + "','"
+            db.execSQL("INSERT INTO " + TABLE_NAME_STUDENTS + " VALUES(null,'" + cp.getName() + "','"
                     + cp.getAge() + "','" + cp.getParentName() + "','" + cp.getParentPhone() + "');");
         }
 

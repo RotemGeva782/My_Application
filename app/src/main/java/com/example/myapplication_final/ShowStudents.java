@@ -2,6 +2,8 @@ package com.example.myapplication_final;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -36,7 +38,11 @@ public class ShowStudents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_students);
 
+        // assigning ID of the toolbar to a variable
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        // using toolbar as ActionBar
+        setSupportActionBar(toolbar);
         add_student = findViewById(R.id.add_student_fabtn);
         lv_students_list = findViewById(R.id.lv_students_list);
         students_list = buildList();
