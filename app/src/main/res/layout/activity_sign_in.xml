@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintVertical_bias="0.138"/>
 
     <EditText
         android:id="@+id/emailAddress_signIn"
@@ -61,7 +61,7 @@
         android:layout_height="60dp"
         android:background="@drawable/btn_shape"
         android:backgroundTint="#1976D2"
-        android:text="הרשמה"
+        android:text="כניסה"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,8 +90,8 @@
 
     <ImageView
         android:id="@+id/password_symbol"
-        android:layout_width="44dp"
-        android:layout_height="49dp"
+        android:layout_width="45dp"
+        android:layout_height="51dp"
         android:background="@drawable/password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +101,8 @@
 
     <ImageView
         android:id="@+id/email_symbol"
-        android:layout_width="38dp"
-        android:layout_height="48dp"
+        android:layout_width="45dp"
+        android:layout_height="51dp"
         android:background="@drawable/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,6 +124,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058"
         app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/show_password_signIn"
+        android:layout_width="37dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/eye" />
+
+    <CheckBox
+        android:id="@+id/SharedPref_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="זכור אותי"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

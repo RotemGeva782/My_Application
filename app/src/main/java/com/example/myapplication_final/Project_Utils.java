@@ -43,6 +43,15 @@ public class Project_Utils {
     final static String COL_MISSING = "missing";
     final static String COL_NUM_OF_LESSONS = "numOfLessons";
 
+    //table 4: users
+    final static String TABLE_NAME_USERS = "tbl_users";
+    final static String COL_ID_US = "idUs";
+    final static String COL_USER_NAME = "name";
+    final static String COL_EMAIL = "email";
+    final static String COL_PASSWORD = "password";
+
+
+
 
     /**
      *

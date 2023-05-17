@@ -65,9 +65,9 @@ public class SplashScreen extends AppCompatActivity {
          * <data base - sqlite>
          */
 
-        db = openOrCreateDatabase(Project_Utils.DATABASE_NAME, Context.MODE_PRIVATE, null);
-        Project_Utils.createTables(db);
-        Project_Utils.insertToTables(db);
+     //   db = openOrCreateDatabase(Project_Utils.DATABASE_NAME, Context.MODE_PRIVATE, null);
+      //  Project_Utils.createTables(db);
+      //  Project_Utils.insertToTables(db);
         /**
          * </data base>
          */

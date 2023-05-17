@@ -201,6 +201,7 @@ public class ShowStudents extends AppCompatActivity {
                 // If the list contains the search query than filter the adapter
                 // using the filter method with the query as its argument
                 if (students_list.contains(query)) {
+                    Toast.makeText(ShowStudents.this, "true", Toast.LENGTH_SHORT).show();
                     adapter.getFilter().filter(query);
                 } else {
                     // Search query not found in List View
